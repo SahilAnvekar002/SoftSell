@@ -18,9 +18,9 @@ export default function Navbar() {
         {/* Hamburger Icon */}
         <div className="lg:hidden flex items-center">
           <button onClick={toggleMenu} className="focus:outline-none">
-            <div className={`w-6 h-0.5 bg-white mb-1 transition-transform duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`}></div>
-            <div className={`w-6 h-0.5 bg-white mb-1 transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></div>
-            <div className={`w-6 h-0.5 bg-white transition-transform duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></div>
+            <div className={`w-6 h-0.5 bg-gray-900 dark:bg-white mb-1 transition-transform duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`}></div>
+            <div className={`w-6 h-0.5 bg-gray-900 dark:bg-white mb-1 transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></div>
+            <div className={`w-6 h-0.5 bg-gray-900 dark:bg-white transition-transform duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></div>
           </button>
         </div>
 
@@ -46,7 +46,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <ul
-        className={`lg:hidden space-y-4 transition-all duration-300 ease-in-out transform lg:static absolute top-full left-0 w-full bg-indigo-600 lg:bg-transparent lg:opacity-100 opacity-0 ${isMenuOpen ? 'opacity-100 translate-y-0' : 'translate-y-4'}`}
+        className={`flex flex-col items-center lg:hidden space-y-4 transition-all duration-300 ease-in-out transform lg:static absolute top-full left-0 w-full dark:bg-gray-900 bg-white text-black dark:text-white lg:bg-transparent lg:opacity-100 opacity-0 ${isMenuOpen ? 'opacity-100 translate-y-0' : 'translate-y-4'}`}
       >
         <li>
           <Link href="#how-it-works" className="block py-2 px-4 text-center hover:bg-indigo-700 transition">How It Works</Link>
@@ -62,7 +62,7 @@ export default function Navbar() {
         </li>
         <li>
             <ThemeToggle />
-          </li>
+        </li>
       </ul>
     </nav>
   );
