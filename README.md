@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SoftSell - Licensing Web Application
 
-## Getting Started
+SoftSell is a modern, responsive web platform that allows users to explore and sell software licenses. Built with **Next.js**, **Tailwind CSS**, and **TypeScript**, this application demonstrates clean architecture, modular components, and professional UI/UX design.
 
-First, run the development server:
+##  Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Display of ad banners from a JSON list
+- Mobile and desktop responsive layout
+- Clean and modern navigation bar and footer
+- Professional UI using Tailwind CSS
+- Animations via Framer Motion
+- SEO optimization and meta tags
+- Dark/light mode toggle
+- Favicon integration
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+##  Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js 14 (App Router)**
+- **React 18**
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Lucide Icons**
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+##  Design Choices
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Used Tailwind CSS for fast, utility-first styling and responsiveness across all screen sizes.
+- Focused on mobile-first design with dynamic resizing and toggles for dark/light themes.
+- Ensured proper meta tags and semantic HTML to optimize discoverability and screen-reader support.
+- Integrated Framer Motion for smooth UI transitions to enhance user experience without overwhelming the interface.
+- Implemented light/dark mode to improve accessibility and user comfort.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+##  Time Spent
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Initial Setup (Next.js, Tailwind, TS)	 1 hrs
+- Component Structure & Logic	         3 hrs
+- Editing & State Management	         2 hrs
+- Responsive Design & Theming	         1 hrs
+- SEO, Meta Tags, and Polish	         1 hr
+- Framer Motion + Dark Mode Toggle	     1 hr
+- Final Testing, Debugging, and Cleanup	 1 hr
+- Total                                  10 hrs 

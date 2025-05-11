@@ -1,7 +1,9 @@
+// Contact Form
 'use client';
 import { useState } from 'react';
 
 export default function ContactForm() {
+  // State to store form data
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,14 +12,18 @@ export default function ContactForm() {
     message: ''
   });
 
+  //  State to check form submission status
   const [submitted, setSubmitted] = useState(false);
 
+  // Handle changes in the form
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Handle Form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Simple client-side check to ensure required fields are filled
     if (formData.name && formData.email && formData.license && formData.message) {
       setSubmitted(true);
     }
@@ -27,10 +33,12 @@ export default function ContactForm() {
     <section id="contact" className="py-20 px-6 bg-white dark:bg-gray-900">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-6">Contact Us</h2>
+        {/* Show confirmation message after successful submission, else show the form */}
         {submitted ? (
           <p className="text-center text-green-600 dark:text-green-400">Thank you! We will be in touch soon.</p>
         ) : (
           <form onSubmit={handleSubmit} className="grid gap-4">
+            {/* User Info */}
             <input
               type="text"
               name="name"
@@ -57,6 +65,7 @@ export default function ContactForm() {
               onChange={handleChange}
               className="p-3 border border-gray-300 rounded-md dark:bg-gray-800 dark:text-white"
             />
+            {/* License Type */}
             <select
               name="license"
               value={formData.license}
@@ -70,6 +79,7 @@ export default function ContactForm() {
               <option value="Design Software">Design Software</option>
               <option value="Other">Other</option>
             </select>
+            {/* Message */}
             <textarea
               name="message"
               placeholder="Your Message"

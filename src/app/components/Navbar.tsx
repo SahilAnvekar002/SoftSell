@@ -1,11 +1,14 @@
+// Navigation Bar
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
 import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
+  // State to check Menu status
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Handle toggle menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };

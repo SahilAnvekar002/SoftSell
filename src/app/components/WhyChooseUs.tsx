@@ -1,6 +1,8 @@
+// Why Choose Us
 'use client';
 import { FaShieldAlt, FaClock, FaHandshake, FaChartLine } from 'react-icons/fa';
 
+// Sample data
 const points = [
   {
     icon: <FaShieldAlt size={36} className="text-indigo-500" />,
@@ -29,6 +31,7 @@ export default function WhyChooseUs() {
     <section className="py-24 px-6 bg-white dark:bg-gray-900" id='why-choose-us'>
       <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        {/* Loop through each point and display the card */}
         {points.map((point, idx) => (
           <div key={idx} className="text-center p-6 rounded-xl shadow-md bg-gray-50 dark:bg-gray-800">
             <div className="mb-4 flex justify-center">{point.icon}</div>

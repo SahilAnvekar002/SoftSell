@@ -1,7 +1,9 @@
+// How it Works
 'use client';
 import { motion } from 'framer-motion';
 import { FaUpload, FaSearchDollar, FaMoneyBillWave } from 'react-icons/fa';
 
+// Sample data
 const steps = [
   {
     icon: <FaUpload size={40} className="text-indigo-500" />,
@@ -25,7 +27,9 @@ export default function HowItWorks() {
     <section className="py-24 px-6 bg-gray-50 dark:bg-gray-800 text-center" id='how-it-works'>
       <h2 className="text-3xl font-bold mb-12">How It Works</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+        {/* Loop through each step and animate the card into view */}
         {steps.map((step, idx) => (
+          // Fade and slide in each step with a staggered delay
           <motion.div
             key={idx}
             className="bg-white dark:bg-gray-900 rounded-xl shadow-md p-6"

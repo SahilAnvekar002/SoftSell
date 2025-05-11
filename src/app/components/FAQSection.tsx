@@ -1,6 +1,8 @@
+// FAQ Section
 'use client';
 import { useState } from 'react';
 
+// Sample data
 const faqs = [
   {
     question: 'What types of software licenses can I sell?',
@@ -21,6 +23,7 @@ const faqs = [
 ];
 
 export default function FAQSection() {
+  // State to check answer toggle
   const [openIndex, setOpenIndex] = useState<null | number>(null);
 
   return (
@@ -28,13 +31,14 @@ export default function FAQSection() {
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
         <div className="space-y-4">
+          {/* Loop through each FAQ and render a collapsible item */}
           {faqs.map((faq, idx) => (
             <div
               key={idx}
               className="border border-gray-300 dark:border-gray-700 rounded-md overflow-hidden"
             >
               <button
-                onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                onClick={() => setOpenIndex(openIndex === idx ? null : idx)} // Toggle open/close state
                 className="w-full text-left p-4 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition cursor-pointer"
               >
                 <h3 className="font-semibold text-indigo-600">{faq.question}</h3>

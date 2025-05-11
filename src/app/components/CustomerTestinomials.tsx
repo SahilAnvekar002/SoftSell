@@ -1,7 +1,8 @@
-// Create the following file: /components/CustomerTestimonials.tsx
+// Customer Testimonials
 'use client';
 import { motion } from 'framer-motion';
 
+// Sample data
 const testimonials = [
   {
     name: 'Sarah Patel',
@@ -24,8 +25,10 @@ export default function CustomerTestimonials() {
     <section className="py-24 px-6 bg-gray-100 dark:bg-gray-800">
       <h2 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-        {testimonials.map((t, idx) => (
+        {/*Animate each testimonial card as it enters the viewport*/}
+        {testimonials.map((t, idx) => ( 
           <motion.div
+            // Fade and slide in testimonial on scroll
             key={idx}
             className="bg-white dark:bg-gray-900 shadow-lg rounded-xl p-6"
             initial={{ opacity: 0, y: 20 }}
